@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Page</title>
+</head>
+
+<body>
+    <h1> Welcome to Student Page </h1>
+    <p> Let me be your guide... </p>
+
+    <!-- Get Object -->
+    <p th:text="${myStudent.name}"> Default Student Object </p>
+
+    <!-- Destructure Object AKA Selection operator * -->
+    <div th:object="${myStudent}">
+        <p th:text="*{name}">Student name</p>
+        <p th:text="*{age}">Student age</p>
+        <p th:text="*{isTired}">Student isTired</p>
+    </div>
+
+    <!-- Iterate AKA for each -->
+    <div th:each="student: ${studentList}">
+        <p th:text="${student.name}"></p>
+    </div>
+
+</body>
+</html>
+
+
