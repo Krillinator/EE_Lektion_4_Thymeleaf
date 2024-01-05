@@ -9,5 +9,4 @@ public class Lektion4Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Lektion4Application.class, args);
 	}
-
 }
