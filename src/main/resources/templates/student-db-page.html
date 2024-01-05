@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Database Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0.3/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1> Welcome to Database Student Page </h1>
+    <p> Something was saved? </p>
+
+    <!-- Get Object -->
+    <p class="p-4" th:text="${student.name}"> Default Student Object </p>
+
+</body>
+</html>
+
+

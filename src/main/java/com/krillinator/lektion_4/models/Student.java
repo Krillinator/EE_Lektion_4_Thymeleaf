@@ -1,11 +1,20 @@
 package com.krillinator.lektion_4.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "students")
 public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
     private String name;
     private int age;
     private boolean isTired;
 
+    public Student() {}
     public Student(String name, int age, boolean isTired) {
         this.name = name;
         this.age = age;
